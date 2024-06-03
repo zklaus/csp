@@ -184,24 +184,13 @@ else()
         set(CMAKE_SHARED_LINKER_FLAGS "-pg ${CMAKE_SHARED_LINKER_FLAGS}")
     endif ()
     if(CMAKE_BUILD_TYPE_LOWER STREQUAL debug)
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
-        -O0 \
-        -g3 \
-        ")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -g3")
         add_definitions(-DCSP_DEBUG)
     else()
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
-        -O3 \
-        -g0 \
-        -Wall \
-        -Wno-deprecated-declarations \
-        -Wno-deprecated \
-        ")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -g0 -Wall -Wno-deprecated-declarations -Wno-deprecated")
         add_definitions(-DNDEBUG)
         if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
-            -Wno-maybe-uninitialized \
-            ")
+            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-maybe-uninitialized")
         endif()
     endif()
 endif()
