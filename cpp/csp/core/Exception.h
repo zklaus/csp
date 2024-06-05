@@ -4,8 +4,8 @@
 #include <exception>
 #include <sstream>
 #include <string.h>
-#include <csp/core/Likely.h>
-#include <csp/core/Platform.h>
+#include "Likely.h"
+#include "Platform.h"
 
 namespace csp
 {
@@ -15,7 +15,7 @@ class Exception : public std::exception
 public:
     Exception( const char * exType, const std::string & description, const char * file, const char * func, int line ) :
         m_exType( exType ), m_description( description ), m_file( file ), m_function( func ), m_line( line ), m_backtracemessages( nullptr )
-    { 
+    {
         setbt();
     }
 

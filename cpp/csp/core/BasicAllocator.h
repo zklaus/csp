@@ -1,7 +1,7 @@
 #ifndef _IN_CSP_CORE_BASIC_ALLOCATOR_H
 #define _IN_CSP_CORE_BASIC_ALLOCATOR_H
 
-#include <csp/core/Platform.h>
+#include "Platform.h"
 #include <stdint.h>
 #include <stdlib.h>
 #include <list>
@@ -18,7 +18,7 @@ namespace csp
 class BasicAllocator
 {
 public:
-    //elemsize is size of a single alloc, blockSize is number of elements to 
+    //elemsize is size of a single alloc, blockSize is number of elements to
     //allocate per block
     BasicAllocator();
     BasicAllocator( size_t elemSize, size_t blockSize, bool useHugePage, bool grow );
@@ -51,13 +51,13 @@ private:
 inline BasicAllocator::BasicAllocator()
 {}
 
-inline BasicAllocator::BasicAllocator( size_t elemSize, size_t blockSize, 
+inline BasicAllocator::BasicAllocator( size_t elemSize, size_t blockSize,
                                        bool useHugePage, bool grow )
 {
     init( elemSize, blockSize, useHugePage, grow );
 }
 
-inline void BasicAllocator::init( size_t elemSize, size_t blockSize, 
+inline void BasicAllocator::init( size_t elemSize, size_t blockSize,
                                   bool useHugePage, bool grow )
 {
     m_grow        = grow;
@@ -78,7 +78,7 @@ inline BasicAllocator::~BasicAllocator()
         else
 #endif
             ::free( entry.buffer );
-    }       
+    }
 }
 
 inline void BasicAllocator::allocBlock()

@@ -5,7 +5,7 @@
 #include <string>
 #include <stdint.h>
 #include <stdlib.h>
-#include <csp/core/Likely.h>
+#include "Likely.h"
 
 #ifndef WIN32
 #include <cxxabi.h>

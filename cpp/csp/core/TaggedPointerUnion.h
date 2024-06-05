@@ -1,7 +1,7 @@
 #ifndef _IN_CSP_CORE_TAGGEDPOINTERUNION_H
 #define _IN_CSP_CORE_TAGGEDPOINTERUNION_H
 
-#include <csp/core/System.h>
+#include "System.h"
 
 namespace csp
 {
@@ -40,14 +40,14 @@ public:
     }
 
     void * raw() const { return m_ptr; }
-    
+
     void * unmasked() const { return ( void * ) ( ( ( uint64_t ) m_ptr ) & ~TAG_MASK ); }
 
     void reset() { m_ptr = nullptr; }
 
     operator bool() const { return m_ptr != nullptr; }
 
-    template<typename T> 
+    template<typename T>
     void set( T * p )
     {
         m_ptr = p;
@@ -55,7 +55,7 @@ public:
     }
 
     //note that this will NOT do error checking, on caller to check isSet as needed
-    template<typename T> 
+    template<typename T>
     T * get() const
     {
         return ( T * ) unmasked();
@@ -74,7 +74,7 @@ public:
 private:
     template< typename T >
     void setMask()
-    { 
+    {
         constexpr size_t bitmask = 1 << typeBit<T>();
         m_ptr = ( void * ) ( ( ( uint64_t ) m_ptr ) | bitmask );
     }

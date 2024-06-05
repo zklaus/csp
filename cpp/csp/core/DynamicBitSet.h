@@ -1,9 +1,9 @@
 #ifndef _IN_CSP_CORE_DYNAMICBITSET_H
 #define _IN_CSP_CORE_DYNAMICBITSET_H
 
-#include <csp/core/Likely.h>
-#include <csp/core/Platform.h>
-#include <type_traits>
+#include "Likely.h"
+#include "Platform.h"
+#include "type_traits"
 
 namespace csp
 {
@@ -51,7 +51,7 @@ public:
 
     ~DynamicBitSet()
     {
-        delete[] m_nodes; 
+        delete[] m_nodes;
     }
 
     void set( index_type value )
@@ -101,7 +101,7 @@ public:
             node++;
         }
         while( node < m_numNodes && !m_nodes[ node ] );
-        
+
         if( unlikely( node == m_numNodes ) )
             return npos;
         else
@@ -125,7 +125,7 @@ public:
             node--;
         }
         while( node >= 0 && !( m_nodes[ node ] ) );
-        
+
         if( unlikely( node < 0 ) )
             return npos;
         else
@@ -158,10 +158,10 @@ private:
 #ifndef WIN32
 #define CLZ_CONSTEXPR constexpr
 #else
-#define CLZ_CONSTEXPR 
+#define CLZ_CONSTEXPR
 #endif
 
-    template<typename value_type, 
+    template<typename value_type,
         std::enable_if_t<std::is_unsigned<value_type>::value, bool> = true>
     static constexpr nbit_type nbits() { return sizeof( value_type ) * 8; }
 

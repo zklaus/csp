@@ -1,7 +1,30 @@
-core_public_headers = ['BasicAllocator.h', 'Config.h.in', 'DynamicBitSet.h', 'Enum.h', 'EnumBitSet.h', 'Exception.h', 'FileUtils.h', 'Generator.h', 'Hash.h', 'Likely.h', 'QueueWaiter.h', 'Platform.h', 'SRMWLockFreeQueue.h', 'System.h', 'TaggedPointerUnion.h', 'Time.h']
-core_source_files = ['Exception.cpp', 'Time.cpp', core_public_headers]
-# configure_file(['Config.h.in', cmake_current_binary_dir, '/cpp/csp/core/Config.h'])
-csp_core_lib = static_library('csp_core', core_source_files)
-# set_target_properties(['csp_core', 'PROPERTIES', 'PUBLIC_HEADER', '${CORE_PUBLIC_HEADERS}'])
-# install(['TARGETS', 'csp_core', 'PUBLIC_HEADER', 'DESTINATION', 'include/csp/core', 'RUNTIME', 'DESTINATION', csp_runtime_install_subdir, 'LIBRARY', 'DESTINATION', 'lib/'])
-# install(['FILES', cmake_current_binary_dir, '/cpp/csp/core/Config.h', 'DESTINATION', 'include/csp/core'])
+project(
+  'csp_core',
+  'cpp',
+  version: '1.15.0.dev0',
+  license: 'BSD-3',
+  meson_version: '>= 1.1.0',
+  default_options: [
+    'c_std=c17',
+    'cpp_std=c++17',
+  ],
+)
+
+conf_data = configuration_data()
+py3 = import('python').find_installation(pure: false)
+PROJECT_VERSION_MAJOR = run_command(py3, '-c', 'import os; print(os.environ["PROJECT_VERSION_MAJOR"])')
+PROJECT_VERSION_MINOR = run_command(py3, '-c', 'import os; print(os.environ["PROJECT_VERSION_MINOR"])')
+PROJECT_VERSION_PATCH = run_command(py3, '-c', 'import os; print(os.environ["PROJECT_VERSION_PATCH"])')
+conf_data.set('CSP_VERSION_MAJOR', PROJECT_VERSION_MAJOR.stdout().strip())
+conf_data.set('CSP_VERSION_MINOR', PROJECT_VERSION_MINOR.stdout().strip())
+conf_data.set('CSP_VERSION_PATCH', PROJECT_VERSION_PATCH.stdout().strip())
+configure_file(input : 'Config.h.in',
+               output : 'Config.h',
+               configuration : conf_data)
+
+core_public_headers = ['BasicAllocator.h', meson.current_build_dir()/'Config.h', 'DynamicBitSet.h', 'Enum.h', 'EnumBitSet.h', 'Exception.h', 'FileUtils.h', 'Generator.h', 'Hash.h', 'Likely.h', 'QueueWaiter.h', 'Platform.h', 'SRMWLockFreeQueue.h', 'System.h', 'TaggedPointerUnion.h', 'Time1.h']
+core_source_files = [core_public_headers, 'Exception.cpp', 'Time.cpp']
+csp_core_lib = static_library(
+    'csp_core',
+    core_source_files
+    )

@@ -1,9 +1,9 @@
 #ifndef _IN_CSP_CORE_TIME_H
 #define _IN_CSP_CORE_TIME_H
 
-#include <csp/core/Exception.h>
-#include <csp/core/Platform.h>
-#include <csp/core/System.h>
+#include "Exception.h"
+#include "Platform.h"
+#include "System.h"
 #include <math.h>
 #include <memory.h>
 #include <stdint.h>
@@ -37,7 +37,7 @@ public:
     int32_t hours() const        { return ( asSeconds() % SECONDS_PER_DAY ) / 3600; }
     int32_t minutes() const      { return ( asSeconds() % 3600 ) / 60; }
     int32_t seconds() const      { return asSeconds() % 60; }
-    
+
     int32_t nanoseconds() const  { return asNanoseconds() % NANOS_PER_SECOND; }
 
     TimeDelta abs() const        { return TimeDelta( std::abs( m_ticks ) ); }
@@ -53,7 +53,7 @@ public:
     bool isNone() const          { return (*this) == TimeDelta::NONE(); }
 
     std::string asString() const;
-    
+
     //from XX units
     static constexpr TimeDelta fromNanoseconds(  int64_t nanos )   { return TimeDelta( nanos ); }
     static constexpr TimeDelta fromMicroseconds( int64_t micros )  { return fromNanoseconds( micros  * NANOS_PER_MICROSECOND ); }
@@ -98,7 +98,7 @@ private:
     //the fact that we store this as nanos is an implementation detail
     constexpr TimeDelta( int64_t raw_nanos ) : m_ticks( raw_nanos ) {}
     int64_t m_ticks;
-};  
+};
 
 inline std::string TimeDelta::asString() const
 {
@@ -148,7 +148,7 @@ inline TimeDelta TimeDelta::fromString( const std::string & str )
         m = v2;
         h = v1;
     }
-    
+
     char * frac = strrchr( ( char * ) c_str, '.' );
     if( frac )
     {
@@ -181,7 +181,7 @@ public:
 
     bool operator==( const Date & rhs ) const { return m_data.value == rhs.m_data.value; }
     bool operator!=( const Date & rhs ) const { return !( (*this) == rhs ); }
-    
+
     bool operator< ( const Date & rhs ) const  { return m_data.value <  rhs.m_data.value; }
     bool operator<=( const Date & rhs ) const  { return m_data.value <= rhs.m_data.value; }
     bool operator> ( const Date & rhs ) const  { return m_data.value >  rhs.m_data.value; }
@@ -303,7 +303,7 @@ inline Date Date::today()
     return Date( TM );
 }
 
-inline std::string Date::asYYYYMMDD() const 
+inline std::string Date::asYYYYMMDD() const
 {
     char buf[32];
     sprintf( buf, "%04d%02d%02d", year(), month(), day() );
@@ -343,7 +343,7 @@ public:
 
     bool operator==( const Time & rhs ) const { return m_ticks == rhs.m_ticks; }
     bool operator!=( const Time & rhs ) const { return !( (*this) == rhs ); }
-    
+
     bool operator< ( const Time & rhs ) const  { return m_ticks <  rhs.m_ticks; }
     bool operator<=( const Time & rhs ) const  { return m_ticks <= rhs.m_ticks; }
     bool operator> ( const Time & rhs ) const  { return m_ticks >  rhs.m_ticks; }
@@ -399,18 +399,18 @@ inline Time::Time( int hour, int minute, int second, int32_t nanosecond )
 
 inline Time& Time::operator +=( const TimeDelta & delta )
 {
-    int64_t newval = m_ticks + delta.asNanoseconds(); 
+    int64_t newval = m_ticks + delta.asNanoseconds();
     checkRange( newval );
     m_ticks = newval;
-    return *this; 
+    return *this;
 }
 
-inline Time& Time::operator -=( const TimeDelta & delta ) 
+inline Time& Time::operator -=( const TimeDelta & delta )
 {
-    int64_t newval = m_ticks - delta.asNanoseconds(); 
+    int64_t newval = m_ticks - delta.asNanoseconds();
     checkRange( newval );
     m_ticks = newval;
-    return *this; 
+    return *this;
 }
 
 inline std::string Time::asString() const
@@ -444,7 +444,7 @@ inline std::ostream & operator <<( std::ostream &os, const Time & t )
     return os;
 }
 
-// Time is internally stored as an int64_t nanoseconds since 1970. 
+// Time is internally stored as an int64_t nanoseconds since 1970.
 // All DateTime objects are stored as UTC and should be treated as such
 class DateTime
 {
@@ -492,12 +492,12 @@ public:
 
     bool operator==( const DateTime & rhs ) const { return m_ticks == rhs.m_ticks; }
     bool operator!=( const DateTime & rhs ) const { return !( (*this) == rhs ); }
-    
+
     bool operator< ( const DateTime & rhs ) const  { return m_ticks <  rhs.m_ticks; }
     bool operator<=( const DateTime & rhs ) const  { return m_ticks <= rhs.m_ticks; }
     bool operator> ( const DateTime & rhs ) const  { return m_ticks >  rhs.m_ticks; }
     bool operator>=( const DateTime & rhs ) const  { return m_ticks >= rhs.m_ticks; }
-    
+
     DateTime operator +( const TimeDelta & delta ) const { return DateTime( m_ticks + delta.asNanoseconds() ); }
     DateTime operator -( const TimeDelta & delta ) const { return DateTime( m_ticks - delta.asNanoseconds() ); }
     TimeDelta operator -( const DateTime & rhs ) const   { return TimeDelta::fromNanoseconds( m_ticks - rhs.m_ticks ); }
@@ -573,7 +573,7 @@ inline const char * DateTime::asCString( char * buf, size_t buflen ) const
 
     if( (*this) == DateTime::MAX_VALUE() )
         return strncpy( buf, "max", buflen );
-    
+
     tm TM = asTM();
 
     size_t len;
@@ -605,7 +605,7 @@ public:
     int day() const   { return m_tm.tm_mday; }
     int month() const { return m_tm.tm_mon + 1; }
     int year() const  { return m_tm.tm_year + 1900; }
-    
+
     int hour() const   { return m_tm.tm_hour; }
     int minute() const { return m_tm.tm_min; }
     int second() const { return m_tm.tm_sec; }
@@ -614,14 +614,14 @@ public:
     //ie if we have micros 222333, milliseconds() wil return 222 and microseconds will return 222333
     int milliseconds() const { return nanoseconds() / NANOS_PER_MILLISECOND; }
     int microseconds() const { return nanoseconds() / NANOS_PER_MICROSECOND; }
-    int nanoseconds() const  
+    int nanoseconds() const
     {
         auto nanos = m_ticks % NANOS_PER_SECOND;
         if( unlikely( nanos < 0 ) )
            nanos += NANOS_PER_SECOND;
         return nanos;
     }
- 
+
     //day of week, 0 = Sunday, 6 = Saturday
     int weekday() const { return m_tm.tm_wday; }
 

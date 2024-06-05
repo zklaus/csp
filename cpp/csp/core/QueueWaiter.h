@@ -3,8 +3,8 @@
 
 #include <mutex>
 #include <condition_variable>
-#include <csp/core/Time.h>
-#include <csp/core/System.h>
+#include "Time1.h"
+#include "System.h"
 
 namespace csp
 {

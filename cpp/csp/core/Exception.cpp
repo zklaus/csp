@@ -1,5 +1,5 @@
-#include <csp/core/Exception.h>
-#include <csp/core/System.h>
+#include "Exception.h"
+#include "System.h"
 
 #include <signal.h>
 #include <string.h>
@@ -90,10 +90,10 @@ void csp_terminate()
 {
     static int tried_throw = 0;
 
-    try 
+    try
     {
         // try once to re-throw currently active exception
-        if( !tried_throw++ ) 
+        if( !tried_throw++ )
             throw;
     }
     catch( const csp::Exception & ex )
@@ -108,9 +108,9 @@ void csp_terminate()
         std::cerr << __FUNCTION__ << " caught unhandled std::exception. what(): "
                   << e.what() << std::endl;
     }
-    catch( ... ) 
+    catch( ... )
     {
-        std::cerr << __FUNCTION__ << " caught unknown/unhandled exception." 
+        std::cerr << __FUNCTION__ << " caught unknown/unhandled exception."
                   << std::endl;
     }
 

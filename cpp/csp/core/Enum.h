@@ -1,9 +1,9 @@
 #ifndef _IN_CSP_CORE_ENUM_H
 #define _IN_CSP_CORE_ENUM_H
 
-#include <csp/core/Hash.h>
-#include <csp/core/Exception.h>
-#include <csp/core/Platform.h>
+#include "Hash.h"
+#include "Exception.h"
+#include "Platform.h"
 #include <memory>
 #include <unordered_map>
 #include <vector>
@@ -44,9 +44,9 @@ using MyEnum = Enum<MyEnumTraits>
 
 //In a cpp file, define your string mappings like so
 INIT_CSP_ENUM( MyEnum,
-    "UNKNOWN", 
-    "A", 
-    "B" 
+    "UNKNOWN",
+    "A",
+    "B"
 );
 
 */
@@ -105,7 +105,7 @@ struct Enum : public EnumTraits
     bool isKnown() const { return this -> m_value != EnumTraits::UNKNOWN; }
     bool isUnknown() const { return this -> m_value == EnumTraits::UNKNOWN; }
 
-    struct iterator 
+    struct iterator
     {
         iterator( int v ) : m_v( v ) {}
 
@@ -130,7 +130,7 @@ struct Enum : public EnumTraits
 protected:
     using Aliases = std::unordered_multimap<std::string,std::string>;
 
-    struct ReverseMap : public std::unordered_map<const char *, typename EnumTraits::_enum, hash::CStrHash, hash::CStrEq> 
+    struct ReverseMap : public std::unordered_map<const char *, typename EnumTraits::_enum, hash::CStrHash, hash::CStrEq>
     {
         using BaseT   = std::unordered_map<const char *, EnumV, hash::CStrHash, hash::CStrEq>;
 
@@ -144,12 +144,12 @@ protected:
             }
         }
 
-        ~ReverseMap() 
+        ~ReverseMap()
         {
             clear();
         }
 
-        void clear() 
+        void clear()
         {
             for( auto &entry : *this )
                 free( const_cast<char *>( entry.first ) );
@@ -157,7 +157,7 @@ protected:
             BaseT::clear();
         }
 
-        EnumV fromString( const char *s ) const 
+        EnumV fromString( const char *s ) const
         {
             auto it = this -> find( s );
             if( it == this -> end() )
@@ -175,16 +175,16 @@ protected:
     //This is defined by INIT macro
     static const Mapping & mapping();
 
-    static const ReverseMap & reverseMap() 
-    { 
+    static const ReverseMap & reverseMap()
+    {
         static ReverseMap s_reverseMap( mapping() );
-        return s_reverseMap; 
+        return s_reverseMap;
     }
 
 } END_PACKED;
 
 template<typename EnumTraits>
-Enum<EnumTraits>::Enum( UType v ) 
+Enum<EnumTraits>::Enum( UType v )
 {
     if( v < 0 || v >= numTypes() )
     {
