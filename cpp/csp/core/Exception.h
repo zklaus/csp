@@ -4,8 +4,8 @@
 #include <exception>
 #include <sstream>
 #include <string.h>
-#include "Likely.h"
-#include "Platform.h"
+#include <Likely.h>
+#include <Platform.h>
 
 namespace csp
 {
