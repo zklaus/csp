@@ -1,9 +1,9 @@
 #ifndef _IN_CSP_CORE_TIME_H
 #define _IN_CSP_CORE_TIME_H
 
-#include "Exception.h"
-#include "Platform.h"
-#include "System.h"
+#include <Exception.h>
+#include <Platform.h>
+#include <System.h>
 #include <math.h>
 #include <memory.h>
 #include <stdint.h>
