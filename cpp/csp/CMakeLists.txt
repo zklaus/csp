@@ -48,7 +48,7 @@ endif()
 #########
 # Custom CMake modules
 if(NOT DEFINED CSP_CMAKE_MODULE_PATH)
-    set(CSP_CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cpp/cmake/modules")
+    set(CSP_CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/../cmake/modules")
 endif()
 list(PREPEND CMAKE_MODULE_PATH "${CSP_CMAKE_MODULE_PATH}")
 
@@ -339,9 +339,9 @@ endif()
 ###################################################################################################################################################
 # Build assets #
 ################
-include_directories("${CMAKE_SOURCE_DIR}/cpp")
+include_directories("${CMAKE_SOURCE_DIR}")
 # for autogen
-include_directories("${CMAKE_BINARY_DIR}/cpp")
+include_directories("${CMAKE_BINARY_DIR}")
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
@@ -355,16 +355,14 @@ else()
     set(CSP_RUNTIME_INSTALL_SUBDIR bin/)
 endif()
 
-add_subdirectory(cpp/csp/adapters)
-add_subdirectory(cpp/csp/core)
-add_subdirectory(cpp/csp/cppnodes)
-add_subdirectory(cpp/csp/engine)
-add_subdirectory(cpp/csp/python)
-add_subdirectory(cpp/csp/python/adapters)
+add_subdirectory(csp/adapters)
+add_subdirectory(csp/core)
+add_subdirectory(csp/cppnodes)
+add_subdirectory(csp/engine)
 
 ###################################################################################################################################################
 # Tests #
 #########
 if(CSP_BUILD_TESTS)
-    add_subdirectory(cpp/tests)
+    add_subdirectory(tests)
 endif()
