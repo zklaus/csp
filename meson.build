@@ -9,6 +9,14 @@ project(
 
 py = import('python').find_installation(pure: false)
 
+incdir_numpy = run_command(py,
+  ['-c', 'import os; os.chdir(".."); import numpy; print(numpy.get_include())'],
+  check : true
+).stdout().strip()
+
+inc_np = include_directories(incdir_numpy)
+
+
 cmake = import('cmake')
 opt_var = cmake.subproject_options()
 opt_var.add_cmake_defines({
