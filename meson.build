@@ -34,4 +34,12 @@ opt_var.set_override_option('name_prefix', '_')
 
 sub_proj = cmake.subproject('csp', options: opt_var)
 
-cm_lib = sub_proj.dependency('csp_core')
+baselibimpl = sub_proj.dependency('baselibimpl')
+basketlibimpl = sub_proj.dependency('basketlibimpl')
+csp_core = sub_proj.dependency('csp_core')
+csp_engine = sub_proj.dependency('csp_engine')
+csp_types = sub_proj.dependency('csp_types')
+mathimpl = sub_proj.dependency('mathimpl')
+statsimpl = sub_proj.dependency('statsimpl')
+
+subdir('csp')
