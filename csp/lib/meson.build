@@ -21,6 +21,9 @@ csptypesimpl = py.extension_module(
     'PyStructToDict.cpp',
     cpp_args: ['-DRAPIDJSON_HAS_STDSTRING=1', '-DCSPTYPESIMPL_EXPORTS=1'],
     dependencies: [csp_core, csp_types],
+    install: true,
+    subdir: 'csp/lib',
+    install_tag: 'python-runtime',
 )
 # set_target_properties(['csptypesimpl', 'PROPERTIES', 'PUBLIC_HEADER', '${CSPTYPESIMPL_PUBLIC_HEADERS}'])
 # target_compile_definitions(['csptypesimpl', 'PUBLIC', 'RAPIDJSON_HAS_STDSTRING=1'])
@@ -86,6 +89,9 @@ cspimpl = py.extension_module(
     cpp_args: ['-DNPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION', '-DCSPIMPL_EXPORTS=1'],
     dependencies: [csp_core, csp_engine],
     link_with: csptypesimpl,
+    install: true,
+    subdir: 'csp/lib',
+    install_tag: 'python-runtime',
 )
 
 # set_target_properties(['cspimpl', 'PROPERTIES', 'PUBLIC_HEADER', '${CSPIMPL_PUBLIC_HEADERS}'])
@@ -98,6 +104,9 @@ cspbaselibimpl = py.extension_module(
     'cspbaselibimpl.cpp',
     dependencies: baselibimpl,
     link_with: cspimpl,
+    install: true,
+    subdir: 'csp/lib',
+    install_tag: 'python-runtime',
 )
 # target_link_libraries(['cspbaselibimpl', 'cspimpl', 'baselibimpl'])
 # Include exprtk include directory for exprtk node
@@ -108,6 +117,9 @@ cspbasketlibimpl = py.extension_module(
     'cspbasketlibimpl.cpp',
     dependencies: basketlibimpl,
     link_with: cspimpl,
+    install: true,
+    subdir: 'csp/lib',
+    install_tag: 'python-runtime',
 )
 # target_link_libraries(['cspbasketlibimpl', 'cspimpl', 'basketlibimpl'])
 ## Math c++ module
@@ -116,6 +128,9 @@ cspmathimpl = py.extension_module(
     'cspmathimpl.cpp',
     dependencies: mathimpl,
     link_with: cspimpl,
+    install: true,
+    subdir: 'csp/lib',
+    install_tag: 'python-runtime',
 )
 # target_link_libraries(['cspmathimpl', 'cspimpl', 'mathimpl'])
 ## Stats c++ module
@@ -124,6 +139,9 @@ cspstatsimpl = py.extension_module(
     'cspstatsimpl.cpp',
     dependencies: statsimpl,
     link_with: cspimpl,
+    install: true,
+    subdir: 'csp/lib',
+    install_tag: 'python-runtime',
 )
 # target_link_libraries(['cspstatsimpl', 'cspimpl', 'statsimpl'])
 ## Testlib c++ module
@@ -132,6 +150,9 @@ csptestlibimpl = py.extension_module(
     'csptestlibimpl.cpp',
     dependencies: csp_engine,
     link_with: cspimpl,
+    install: true,
+    subdir: 'csp/lib',
+    install_tag: 'python-runtime',
 )
 # target_link_libraries(['csptestlibimpl', 'cspimpl'])
 ## NumPy stats c++ module
@@ -139,14 +160,20 @@ npstatsimpl = static_library(
     'npstatsimpl',
     'npstatsimpl.cpp',
     include_directories: inc_np,
+    dependencies: [csp_core, csp_engine, py.dependency()],
 )
 cspnpstatsimpl = py.extension_module(
-    'cspnpstatsimpl',
+    '_cspnpstatsimpl',
     'cspnpstatsimpl.cpp',
     include_directories: inc_np,
     link_with: [cspimpl, npstatsimpl],
+    install: true,
+    subdir: 'csp/lib',
+    install_tag: 'python-runtime',
 )
 # target_link_libraries(['cspnpstatsimpl', 'cspimpl', 'npstatsimpl'])
 # target_include_directories(['npstatsimpl', 'PRIVATE', numpy_include_dirs])
 # target_include_directories(['cspnpstatsimpl', 'PRIVATE', numpy_include_dirs])
 # install(['TARGETS', 'csptypesimpl', 'cspimpl', 'cspbaselibimpl', 'cspbasketlibimpl', 'cspmathimpl', 'cspstatsimpl', 'csptestlibimpl', 'cspnpstatsimpl', 'PUBLIC_HEADER', 'DESTINATION', 'include/csp/python', 'RUNTIME', 'DESTINATION', csp_runtime_install_subdir, 'LIBRARY', 'DESTINATION', 'lib/'])
+
+py.install_sources('__init__.py', subdir: 'csp/lib')
