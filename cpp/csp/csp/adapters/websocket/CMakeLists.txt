@@ -1,4 +1,6 @@
-csp_autogen( csp.adapters.websocket_types websocket_types WEBSOCKET_HEADER WEBSOCKET_SOURCE )
+# csp_autogen( csp.adapters.websocket_types websocket_types WEBSOCKET_HEADER WEBSOCKET_SOURCE )
+set(WEBSOCKET_HEADER "csp_autogen/websocket_types.h")
+set(WEBSOCKET_SOURCE "csp_autogen/websocket_types.cpp")
 
 set(WS_CLIENT_HEADER_FILES
         ClientAdapterManager.h

@@ -1,4 +1,6 @@
-csp_autogen( csp.impl.types.autogen_types autogen_types ENGINE_AUTOGEN_HEADER ENGINE_AUTOGEN_SOURCE )
+# csp_autogen( csp.impl.types.autogen_types autogen_types ENGINE_AUTOGEN_HEADER ENGINE_AUTOGEN_SOURCE )
+set(ENGINE_AUTOGEN_HEADER "csp_autogen/autogen_types.h")
+set(ENGINE_AUTOGEN_SOURCE "csp_autogen/autogen_types.cpp")
 
 set(CSP_TYPES_PUBLIC_HEADERS
         CspEnum.h
