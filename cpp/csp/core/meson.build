@@ -9,14 +9,11 @@ project(
   ],
 )
 
+PROJECT_VERSION = meson.project_version().split('.')
 conf_data = configuration_data()
-py3 = import('python').find_installation(pure: false)
-PROJECT_VERSION_MAJOR = run_command(py3, '-c', 'import os; print(os.environ["PROJECT_VERSION_MAJOR"])')
-PROJECT_VERSION_MINOR = run_command(py3, '-c', 'import os; print(os.environ["PROJECT_VERSION_MINOR"])')
-PROJECT_VERSION_PATCH = run_command(py3, '-c', 'import os; print(os.environ["PROJECT_VERSION_PATCH"])')
-conf_data.set('CSP_VERSION_MAJOR', PROJECT_VERSION_MAJOR.stdout().strip())
-conf_data.set('CSP_VERSION_MINOR', PROJECT_VERSION_MINOR.stdout().strip())
-conf_data.set('CSP_VERSION_PATCH', PROJECT_VERSION_PATCH.stdout().strip())
+conf_data.set('CSP_VERSION_MAJOR', PROJECT_VERSION[0])
+conf_data.set('CSP_VERSION_MINOR', PROJECT_VERSION[1])
+conf_data.set('CSP_VERSION_PATCH', PROJECT_VERSION[2])
 configure_file(input : 'Config.h.in',
                output : 'Config.h',
                configuration : conf_data)
