@@ -8,4 +8,4 @@ Note that you need to switch your working directory to `cpp/csp/core` from proje
 
 Changes made,
 
-1. Rename `Time.h` to `Time_.h`.
+1. Rename `Time.h` to `TimeAndDate.h`.
