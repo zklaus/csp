@@ -1,9 +1,9 @@
 #ifndef _IN_CSP_CORE_ENUM_H
 #define _IN_CSP_CORE_ENUM_H
 
-#include <Hash.h>
-#include <Exception.h>
-#include <Platform.h>
+#include <csp/core/Hash.h>
+#include <csp/core/Exception.h>
+#include <csp/core/Platform.h>
 #include <memory>
 #include <unordered_map>
 #include <vector>

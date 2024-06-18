@@ -1,8 +1,8 @@
 #ifndef _IN_CSP_CORE_DYNAMICBITSET_H
 #define _IN_CSP_CORE_DYNAMICBITSET_H
 
-#include <Likely.h>
-#include <Platform.h>
+#include <csp/core/Likely.h>
+#include <csp/core/Platform.h>
 #include <type_traits>
 
 namespace csp

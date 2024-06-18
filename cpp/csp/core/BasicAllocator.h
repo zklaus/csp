@@ -1,7 +1,7 @@
 #ifndef _IN_CSP_CORE_BASIC_ALLOCATOR_H
 #define _IN_CSP_CORE_BASIC_ALLOCATOR_H
 
-#include <Platform.h>
+#include <csp/core/Platform.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <list>

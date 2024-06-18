@@ -26,5 +26,6 @@ core_public_headers = ['BasicAllocator.h', meson.current_build_dir()/'Config.h',
 core_source_files = [core_public_headers, 'Exception.cpp', 'Time.cpp']
 csp_core_lib = static_library(
     'csp_core',
-    core_source_files
-    )
+    core_source_files,
+    include_directories: '../../../'
+)
