@@ -6,6 +6,7 @@ project(
   meson_version: '>= 1.1.0',
   default_options: [
     'cpp_std=c++17',
+    'default_library=static',
   ],
 )
 
@@ -43,10 +44,10 @@ core_source_files = [
     'Time.cpp'
 ]
 
-csp_core_lib = static_library(
+csp_core_lib = library(
     'csp_core',
     core_source_files,
-    include_directories: '../../../',
+    include_directories: '../../',
     install: true,
 )
 
