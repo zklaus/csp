@@ -1,8 +1,8 @@
 #include <csp/engine/Feedback.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/PyEngine.h>
-#include <csp/python/PyInputAdapterWrapper.h>
-#include <csp/python/PyOutputAdapterWrapper.h>
+#include "Conversions.h"
+#include "PyEngine.h"
+#include "PyInputAdapterWrapper.h"
+#include "PyOutputAdapterWrapper.h"
 
 namespace csp::python
 {

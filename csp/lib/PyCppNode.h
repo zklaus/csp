@@ -3,8 +3,8 @@
 
 #include <Python.h>
 #include <csp/engine/CppNode.h>
-#include <csp/python/Exception.h>
-#include <csp/python/InitHelper.h>
+#include "Exception.h"
+#include "InitHelper.h"
 
 namespace csp::python
 {

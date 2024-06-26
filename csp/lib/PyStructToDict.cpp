@@ -1,5 +1,5 @@
-#include <csp/python/PyStructToDict.h>
-#include <csp/python/PyIterator.h>
+#include "PyStructToDict.h"
+#include "PyIterator.h"
 
 namespace csp::python
 {

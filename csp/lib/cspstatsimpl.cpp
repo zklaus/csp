@@ -1,5 +1,5 @@
 #include <csp/engine/CppNode.h>
-#include <csp/python/PyCppNode.h>
+#include "PyCppNode.h"
 
 // Data processing nodes
 REGISTER_CPPNODE( csp::cppnodes,  _tick_window_updates );

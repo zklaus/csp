@@ -1,9 +1,9 @@
 #include <csp/engine/PullInputAdapter.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/Exception.h>
-#include <csp/python/PyInputAdapterWrapper.h>
-#include <csp/python/PyEngine.h>
-#include <csp/python/PyObjectPtr.h>
+#include "Conversions.h"
+#include "Exception.h"
+#include "PyInputAdapterWrapper.h"
+#include "PyEngine.h"
+#include "PyObjectPtr.h"
 
 namespace csp::python
 {

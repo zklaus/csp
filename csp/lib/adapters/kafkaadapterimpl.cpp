@@ -1,12 +1,12 @@
 #include <csp/adapters/kafka/KafkaAdapterManager.h>
 #include <csp/engine/PushInputAdapter.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/Exception.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyAdapterManagerWrapper.h>
-#include <csp/python/PyEngine.h>
-#include <csp/python/PyInputAdapterWrapper.h>
-#include <csp/python/PyOutputAdapterWrapper.h>
+#include "Conversions.h"
+#include "Exception.h"
+#include "InitHelper.h"
+#include "PyAdapterManagerWrapper.h"
+#include "PyEngine.h"
+#include "PyInputAdapterWrapper.h"
+#include "PyOutputAdapterWrapper.h"
 
 using namespace csp::adapters::kafka;
 

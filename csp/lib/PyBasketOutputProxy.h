@@ -2,7 +2,7 @@
 #define _IN_CSP_PYTHON_PYBASKETOUTPUTPROXY_H
 
 #include <csp/engine/InputId.h>
-#include <csp/python/Conversions.h>
+#include "Conversions.h"
 #include <Python.h>
 
 namespace csp::python

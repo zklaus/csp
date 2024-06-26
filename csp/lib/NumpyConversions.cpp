@@ -3,7 +3,7 @@
 
 
 #include <csp/core/Time.h>
-#include <csp/python/NumpyConversions.h>
+#include "NumpyConversions.h"
 
 #include <locale>
 #include <codecvt>

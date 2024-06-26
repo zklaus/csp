@@ -1,9 +1,9 @@
-#include <csp/python/Conversions.h>
-#include <csp/python/Exception.h>
-#include <csp/python/PyInputAdapterWrapper.h>
-#include <csp/python/PyCspType.h>
-#include <csp/python/PyNodeWrapper.h>
-#include <csp/python/PyObjectPtr.h>
+#include "Conversions.h"
+#include "Exception.h"
+#include "PyInputAdapterWrapper.h"
+#include "PyCspType.h"
+#include "PyNodeWrapper.h"
+#include "PyObjectPtr.h"
 
 namespace csp::python
 {

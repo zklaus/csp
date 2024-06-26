@@ -1,6 +1,6 @@
-#include <csp/python/PyCppNode.h>
+#include "PyCppNode.h"
 #include <csp/engine/CppNode.h>
-#include <csp/python/Conversions.h>
+#include "Conversions.h"
 
 // Math ops
 REGISTER_CPPNODE( csp::cppnodes, add_f );

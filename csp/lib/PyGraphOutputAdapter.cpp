@@ -1,10 +1,10 @@
 #include <csp/engine/DynamicEngine.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/PyEngine.h>
-#include <csp/python/PyGraphOutputAdapter.h>
-#include <csp/python/Exception.h>
-#include <csp/python/PyOutputAdapterWrapper.h>
-#include <csp/python/NumpyConversions.h>
+#include "Conversions.h"
+#include "PyEngine.h"
+#include "PyGraphOutputAdapter.h"
+#include "Exception.h"
+#include "PyOutputAdapterWrapper.h"
+#include "NumpyConversions.h"
 
 namespace csp::python
 {

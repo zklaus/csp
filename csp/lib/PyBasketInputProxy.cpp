@@ -1,13 +1,13 @@
 #include <csp/engine/BasketInfo.h>
 #include <csp/engine/Node.h>
-#include <csp/python/Common.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/Exception.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyBasketInputProxy.h>
-#include <csp/python/PyInputProxy.h>
-#include <csp/python/PyIterator.h>
-#include <csp/python/PyNode.h>
+#include "Common.h"
+#include "Conversions.h"
+#include "Exception.h"
+#include "InitHelper.h"
+#include "PyBasketInputProxy.h"
+#include "PyInputProxy.h"
+#include "PyIterator.h"
+#include "PyNode.h"
 
 namespace csp::python
 {

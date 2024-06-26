@@ -2,8 +2,8 @@
 #define _IN_CSP_PYTHON_PYINPUTPROXY_H
 
 #include <csp/engine/InputId.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/NumpyConversions.h>
+#include "Conversions.h"
+#include "NumpyConversions.h"
 #include <Python.h>
 
 namespace csp::python

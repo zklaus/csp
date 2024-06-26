@@ -1,17 +1,17 @@
 #include <csp/engine/InputId.h>
 #include <csp/engine/Node.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/Exception.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyEngine.h>
-#include <csp/python/PyInputAdapterWrapper.h>
-#include <csp/python/PyBasketInputProxy.h>
-#include <csp/python/PyInputProxy.h>
-#include <csp/python/PyOutputProxy.h>
-#include <csp/python/PyCspType.h>
-#include <csp/python/PyNode.h>
-#include <csp/python/PyNodeWrapper.h>
-#include <csp/python/PyNumbaNode.h>
+#include "Conversions.h"
+#include "Exception.h"
+#include "InitHelper.h"
+#include "PyEngine.h"
+#include "PyInputAdapterWrapper.h"
+#include "PyBasketInputProxy.h"
+#include "PyInputProxy.h"
+#include "PyOutputProxy.h"
+#include "PyCspType.h"
+#include "PyNode.h"
+#include "PyNodeWrapper.h"
+#include "PyNumbaNode.h"
 
 #include <frameobject.h>
 

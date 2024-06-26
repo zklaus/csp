@@ -1,4 +1,4 @@
-#include <csp/python/PyStructToJson.h>
+#include "PyStructToJson.h"
 #include <rapidjson/document.h>
 #include <rapidjson/writer.h>
 

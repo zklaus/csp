@@ -1,9 +1,9 @@
 #ifndef _IN_CSP_PYTHON_PYOUTPUTADAPTERWRAPPER_H
 #define _IN_CSP_PYTHON_PYOUTPUTADAPTERWRAPPER_H
 
-#include <csp/python/Conversions.h>
-#include <csp/python/Exception.h>
-#include <csp/python/InitHelper.h>
+#include "Conversions.h"
+#include "Exception.h"
+#include "InitHelper.h"
 
 namespace csp { class OutputAdapter; }
 

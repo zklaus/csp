@@ -3,7 +3,7 @@
 
 #include <csp/core/Time.h>
 #include <csp/engine/RootEngine.h>
-#include <csp/python/PyObjectPtr.h>
+#include "PyObjectPtr.h"
 #include <Python.h>
 #include <memory>
 

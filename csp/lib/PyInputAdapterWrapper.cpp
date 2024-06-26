@@ -1,10 +1,10 @@
 #include <csp/engine/InputAdapter.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/Exception.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyEngine.h>
-#include <csp/python/PyInputAdapterWrapper.h>
-#include <csp/python/PyAdapterManagerWrapper.h>
+#include "Conversions.h"
+#include "Exception.h"
+#include "InitHelper.h"
+#include "PyEngine.h"
+#include "PyInputAdapterWrapper.h"
+#include "PyAdapterManagerWrapper.h"
 
 namespace csp::python
 {

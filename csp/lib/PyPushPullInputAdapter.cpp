@@ -1,11 +1,11 @@
 #include <csp/engine/PushPullInputAdapter.h>
-#include <csp/python/Common.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/Exception.h>
-#include <csp/python/PyInputAdapterWrapper.h>
-#include <csp/python/PyPushInputAdapter.h>
-#include <csp/python/PyEngine.h>
-#include <csp/python/PyObjectPtr.h>
+#include "Common.h"
+#include "Conversions.h"
+#include "Exception.h"
+#include "PyInputAdapterWrapper.h"
+#include "PyPushInputAdapter.h"
+#include "PyEngine.h"
+#include "PyObjectPtr.h"
 
 namespace csp::python
 {

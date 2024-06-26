@@ -2,12 +2,12 @@
 #include <csp/engine/DynamicEngine.h>
 #include <csp/engine/DynamicNode.h>
 #include <csp/engine/GraphOutputAdapter.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/Exception.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyEngine.h>
-#include <csp/python/PyCspType.h>
-#include <csp/python/PyNodeWrapper.h>
+#include "Conversions.h"
+#include "Exception.h"
+#include "InitHelper.h"
+#include "PyEngine.h"
+#include "PyCspType.h"
+#include "PyNodeWrapper.h"
 
 namespace csp::python
 {

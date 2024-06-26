@@ -1,8 +1,8 @@
-#include <csp/python/Conversions.h>
-#include <csp/python/CspTypeFactory.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyCspEnum.h>
-#include <csp/python/PyObjectPtr.h>
+#include "Conversions.h"
+#include "CspTypeFactory.h"
+#include "InitHelper.h"
+#include "PyCspEnum.h"
+#include "PyObjectPtr.h"
 
 namespace csp::python
 {

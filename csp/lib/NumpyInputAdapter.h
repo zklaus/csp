@@ -2,7 +2,7 @@
 #define _IN_CSP_PYTHON_NUMPYINPUTADAPTER_H
 
 #include <csp/engine/PullInputAdapter.h>
-#include <csp/python/NumpyConversions.h>
+#include "NumpyConversions.h"
 
 #define NO_IMPORT_ARRAY
 #include <numpy/ndarrayobject.h>

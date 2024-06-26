@@ -3,7 +3,7 @@
 
 #include <csp/engine/csp_autogen/autogen_types.h>
 #include <csp/engine/CspType.h>
-#include <csp/python/Conversions.h>
+#include "Conversions.h"
 
 #define NO_IMPORT_ARRAY
 #include <numpy/ndarrayobject.h>

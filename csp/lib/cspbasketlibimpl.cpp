@@ -1,5 +1,5 @@
 #include <csp/engine/CppNode.h>
-#include <csp/python/PyCppNode.h>
+#include "PyCppNode.h"
 
 REGISTER_CPPNODE( csp::cppnodes, _sync_list );
 REGISTER_CPPNODE( csp::cppnodes, _sample_list );

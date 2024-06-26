@@ -5,10 +5,10 @@
 #include <numpy/npy_math.h> // need to be included before csp
 
 //Include first so that csp dialect types are defined
-#include <csp/python/Common.h>
-#include <csp/python/PyCspType.h>
-#include <csp/python/PyCspType.h>
-#include <csp/python/PyObjectPtr.h>
+#include "Common.h"
+#include "PyCspType.h"
+#include "PyCspType.h"
+#include "PyObjectPtr.h"
 
 #include <csp/core/Time.h>
 #include <csp/cppnodes/statsimpl.h>

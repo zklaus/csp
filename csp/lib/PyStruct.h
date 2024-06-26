@@ -3,7 +3,7 @@
 
 #include <csp/core/Platform.h>
 #include <csp/engine/Struct.h>
-#include <csp/python/PyObjectPtr.h>
+#include "PyObjectPtr.h"
 #include <memory>
 #include <string>
 

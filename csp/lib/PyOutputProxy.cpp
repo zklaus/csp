@@ -1,7 +1,7 @@
-#include <csp/python/Conversions.h>
-#include <csp/python/Exception.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyOutputProxy.h>
+#include "Conversions.h"
+#include "Exception.h"
+#include "InitHelper.h"
+#include "PyOutputProxy.h"
 
 namespace csp::python
 {

@@ -2,12 +2,12 @@
 #define _IN_CSP_PYTHON_PYSTRUCTFASTLIST_IMPL_H
 
 #include <csp/engine/PartialSwitchCspType.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyCspType.h>
-#include <csp/python/PyStruct.h>
-#include <csp/python/PyStructFastList.h>
-#include <csp/python/VectorWrapper.h>
+#include "Conversions.h"
+#include "InitHelper.h"
+#include "PyCspType.h"
+#include "PyStruct.h"
+#include "PyStructFastList.h"
+#include "VectorWrapper.h"
 #include <algorithm>
 
 // The Py_TPFLAGS_SEQUENCE flag is used for 'match' statement to work. It is not available prior Python 3.10, so need to use conditional compilation

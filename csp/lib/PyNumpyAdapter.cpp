@@ -4,11 +4,11 @@
 // BUT!  really we can't have this here and in NumpyConversions.cpp....
 //
 
-#include <csp/python/Conversions.h>
-#include <csp/python/Exception.h>
-#include <csp/python/NumpyInputAdapter.h>
-#include <csp/python/PyEngine.h>
-#include <csp/python/PyInputAdapterWrapper.h>
+#include "Conversions.h"
+#include "Exception.h"
+#include "NumpyInputAdapter.h"
+#include "PyEngine.h"
+#include "PyInputAdapterWrapper.h"
 
 
 namespace csp::python

@@ -1,8 +1,8 @@
 #include <csp/engine/DynamicEngine.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyEngine.h>
-#include <csp/python/PyNode.h>
+#include "Conversions.h"
+#include "InitHelper.h"
+#include "PyEngine.h"
+#include "PyNode.h"
 #include <frameobject.h>
 #include <traceback.h>
 namespace csp::python

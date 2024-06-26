@@ -1,11 +1,11 @@
 #ifndef _IN_CSP_PYTHON_PYSTRUCTFASTLIST_H
 #define _IN_CSP_PYTHON_PYSTRUCTFASTLIST_H
 
-#include <csp/python/Conversions.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyIterator.h>
-#include <csp/python/PyStruct.h>
-#include <csp/python/VectorWrapper.h>
+#include "Conversions.h"
+#include "InitHelper.h"
+#include "PyIterator.h"
+#include "PyStruct.h"
+#include "VectorWrapper.h"
 #include <Python.h>
 #include <vector>
 

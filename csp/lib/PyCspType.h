@@ -3,7 +3,7 @@
 
 #include <csp/core/Platform.h>
 #include <csp/engine/CspType.h>
-#include <csp/python/PyObjectPtr.h>
+#include "PyObjectPtr.h"
 
 static_assert( sizeof( csp::DialectGenericType ) == sizeof( csp::python::PyObjectPtr ) );
 static_assert( alignof( csp::DialectGenericType ) == alignof( csp::python::PyObjectPtr ) );

@@ -1,14 +1,14 @@
 #include <csp/engine/TimeSeriesProvider.h>
-#include <csp/python/Common.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyEngine.h>
-#include <csp/python/PyGraphOutputAdapter.h>
-#include <csp/python/PyNode.h>
+#include "Common.h"
+#include "Conversions.h"
+#include "InitHelper.h"
+#include "PyEngine.h"
+#include "PyGraphOutputAdapter.h"
+#include "PyNode.h"
 
 
 //define engine-level csp switch types here
-#include <csp/python/PyCspType.h>
+#include "PyCspType.h"
 
 namespace csp::python
 {

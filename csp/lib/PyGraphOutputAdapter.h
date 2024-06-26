@@ -2,7 +2,7 @@
 #define _IN_CSP_PYTHON_PYGRAPHOUPUTADAPTER_H
 
 #include <csp/engine/GraphOutputAdapter.h>
-#include <csp/python/PyObjectPtr.h>
+#include "PyObjectPtr.h"
 
 namespace csp::python
 {

@@ -1,10 +1,10 @@
 #include <csp/engine/Node.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/Exception.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyInputProxy.h>
-#include <csp/python/PyNode.h>
-#include <csp/python/PyConstants.h>
+#include "Conversions.h"
+#include "Exception.h"
+#include "InitHelper.h"
+#include "PyInputProxy.h"
+#include "PyNode.h"
+#include "PyConstants.h"
 #include <csp/core/Exception.h>
 
 

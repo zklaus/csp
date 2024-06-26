@@ -2,11 +2,11 @@
 #define _IN_CSP_PYTHON_PYSTRUCTLIST_IMPL_H
 
 #include <csp/engine/PartialSwitchCspType.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyCspType.h>
-#include <csp/python/PyStructList.h>
-#include <csp/python/VectorWrapper.h>
+#include "Conversions.h"
+#include "InitHelper.h"
+#include "PyCspType.h"
+#include "PyStructList.h"
+#include "VectorWrapper.h"
 #include <algorithm>
 
 namespace csp::python

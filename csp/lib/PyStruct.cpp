@@ -1,12 +1,12 @@
-#include <csp/python/Conversions.h>
-#include <csp/python/CspTypeFactory.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyObjectPtr.h>
-#include <csp/python/PyStruct.h>
-#include <csp/python/PyStructFastList_impl.h>
-#include <csp/python/PyStructList_impl.h>
-#include <csp/python/PyStructToJson.h>
-#include <csp/python/PyStructToDict.h>
+#include "Conversions.h"
+#include "CspTypeFactory.h"
+#include "InitHelper.h"
+#include "PyObjectPtr.h"
+#include "PyStruct.h"
+#include "PyStructFastList_impl.h"
+#include "PyStructList_impl.h"
+#include "PyStructToJson.h"
+#include "PyStructToDict.h"
 #include <unordered_set>
 #include <type_traits>
 

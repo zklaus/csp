@@ -1,7 +1,7 @@
 #ifndef _IN_CSP_PYTHON_PYOBJECTPTR_H
 #define _IN_CSP_PYTHON_PYOBJECTPTR_H
 
-#include <csp/python/Exception.h>
+#include "Exception.h"
 
 namespace csp::python
 {

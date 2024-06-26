@@ -1,9 +1,9 @@
 #ifndef _IN_CSP_PYTHON_PYSTRUCTLIST_H
 #define _IN_CSP_PYTHON_PYSTRUCTLIST_H
 
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyStruct.h>
-#include <csp/python/VectorWrapper.h>
+#include "InitHelper.h"
+#include "PyStruct.h"
+#include "VectorWrapper.h"
 #include <Python.h>
 #include <vector>
 

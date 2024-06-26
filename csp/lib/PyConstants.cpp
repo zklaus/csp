@@ -1,8 +1,8 @@
 #include <Python.h>
 #include <pythonrun.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyConstants.h>
+#include "Conversions.h"
+#include "InitHelper.h"
+#include "PyConstants.h"
 
 static PyObject * s_UNSET;
 static PyObject * s_REMOVE_DYNAMIC_KEY;

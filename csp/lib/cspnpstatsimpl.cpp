@@ -1,5 +1,5 @@
 #include <csp/engine/CppNode.h>
-#include <csp/python/PyCppNode.h>
+#include "PyCppNode.h"
 
 // Register nodes and create module
 

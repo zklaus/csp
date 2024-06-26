@@ -1,10 +1,10 @@
 #include <csp/engine/AdapterManager.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/PyAdapterManager.h>
-#include <csp/python/PyEngine.h>
-#include <csp/python/Exception.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyObjectPtr.h>
+#include "Conversions.h"
+#include "PyAdapterManager.h"
+#include "PyEngine.h"
+#include "Exception.h"
+#include "InitHelper.h"
+#include "PyObjectPtr.h"
 #include <memory>
 
 namespace csp::python

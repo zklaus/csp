@@ -1,6 +1,6 @@
-#include <csp/python/PyCspType.h>
-#include <csp/python/PyStruct.h>
-#include <csp/python/Conversions.h>
+#include "PyCspType.h"
+#include "PyStruct.h"
+#include "Conversions.h"
 #include <Python.h>
 
 static_assert( sizeof( csp::DialectGenericType ) == sizeof( csp::python::PyObjectPtr ) );

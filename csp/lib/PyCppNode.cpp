@@ -1,8 +1,8 @@
 #include <csp/engine/Dictionary.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/PyCppNode.h>
-#include <csp/python/PyEngine.h>
-#include <csp/python/PyNodeWrapper.h>
+#include "Conversions.h"
+#include "PyCppNode.h"
+#include "PyEngine.h"
+#include "PyNodeWrapper.h"
 
 namespace csp::python
 {

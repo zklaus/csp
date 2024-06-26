@@ -1,7 +1,7 @@
-#include <csp/python/Common.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/CspTypeFactory.h>
-#include <csp/python/PyStruct.h>
+#include "Common.h"
+#include "Conversions.h"
+#include "CspTypeFactory.h"
+#include "PyStruct.h"
 #include <datetime.h>
 
 namespace csp::python

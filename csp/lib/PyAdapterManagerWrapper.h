@@ -2,8 +2,8 @@
 #define _IN_CSP_PYTHON_PYADAPTERMANAGERWRAPPER_H
 
 #include <Python.h>
-#include <csp/python/Exception.h>
-#include <csp/python/InitHelper.h>
+#include "Exception.h"
+#include "InitHelper.h"
 
 namespace csp { class AdapterManager; }
 

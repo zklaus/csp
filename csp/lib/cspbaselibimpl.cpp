@@ -1,7 +1,7 @@
-#include <csp/python/Common.h>
-#include <csp/python/PyCppNode.h>
+#include "Common.h"
+#include "PyCppNode.h"
 #include <csp/engine/CppNode.h>
-#include <csp/python/Conversions.h>
+#include "Conversions.h"
 #include <exprtk.hpp>
 #include <numpy/ndarrayobject.h>
 

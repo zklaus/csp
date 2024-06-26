@@ -1,8 +1,8 @@
 #include <csp/engine/ConstInputAdapter.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/PyEngine.h>
-#include <csp/python/Exception.h>
-#include <csp/python/PyInputAdapterWrapper.h>
+#include "Conversions.h"
+#include "PyEngine.h"
+#include "Exception.h"
+#include "PyInputAdapterWrapper.h"
 
 namespace csp::python
 {

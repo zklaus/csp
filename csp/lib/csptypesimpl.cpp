@@ -1,4 +1,4 @@
-#include <csp/python/InitHelper.h>
+#include "InitHelper.h"
 #include <frameobject.h>
 #include <traceback.h>
 

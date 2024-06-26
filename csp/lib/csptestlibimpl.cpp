@@ -1,9 +1,9 @@
 #include <Python.h>
 #include <csp/engine/CppNode.h>
-#include <csp/python/Conversions.h>
-#include <csp/python/InitHelper.h>
-#include <csp/python/PyCppNode.h>
-#include <csp/python/PyObjectPtr.h>
+#include "Conversions.h"
+#include "InitHelper.h"
+#include "PyCppNode.h"
+#include "PyObjectPtr.h"
 
 namespace csp::cppnodes
 {

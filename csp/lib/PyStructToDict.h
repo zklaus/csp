@@ -1,7 +1,7 @@
 #ifndef _IN_CSP_PYSTRUCT_TODICT_H
 #define _IN_CSP_PYSTRUCT_TODICT_H
 
-#include <csp/python/Conversions.h>
+#include "Conversions.h"
 
 namespace csp::python
 {
