@@ -96,11 +96,11 @@ ext/
 install/
 _skbuild/
 target/
-lib/
+# lib/
 lib64/
 csp/bin/
 csp/include/
-csp/lib/
+# csp/lib/
 *.so
 *.tsbuildinfo
 
